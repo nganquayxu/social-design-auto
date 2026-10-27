@@ -1,5 +1,6 @@
 # Spiking infographic workflow
 
+A daily workflow that finds recent viral US-stock posts on Instagram, picks the best one, and writes a ready-to-use infographic brief. ChatGPT then reads the brief from Google Drive and designs the infographic in the Spiking style.
 
 No secrets are stored in this repo. Tokens live in `.env` / environment variables only.
 
