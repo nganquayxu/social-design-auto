@@ -9,12 +9,11 @@ No secrets are stored in this repo. Tokens live in `.env` / environment variable
 ## How it works
 
 ```
-Schedule (daily 9:00)  ->  Claude reads claude/SKILL.md
-  |
-  |- python3 fetch.py   (Meta API: recent posts from monitored accounts -> candidates.json + images)
-  |- Claude picks the best post and writes brief.md + reference.jpg
-  |- Saved to the Google Drive folder (Drive desktop sync, or gdrive.py upload), one folder per day
-  `- ChatGPT reads brief.md + style-guide.md from Drive and generates the infographic
+Every morning at 9:00
+  1. Claude gets new Instagram posts      (fetch.py)
+  2. Claude picks the best one and writes a brief
+  3. The brief is saved to Google Drive
+  4. ChatGPT reads the brief from Drive and makes the infographic
 ```
 
 ---
