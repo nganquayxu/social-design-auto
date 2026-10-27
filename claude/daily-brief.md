@@ -1,5 +1,5 @@
 ---
-description: Fetch today's Instagram candidates, pick the best post and write brief.md ([BRAND_NAME] infographic workflow)
+description: Fetch today's Instagram candidates, pick the best post and write brief.md (Social Media Design/Infographic Workflow)
 ---
 Do the daily infographic brief, end to end.
 
