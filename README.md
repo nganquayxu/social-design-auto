@@ -8,36 +8,14 @@ No secrets are stored in this repo. Tokens live in `.env` / environment variable
 
 ## How it works
 
-Every morning Claude finds the best recent viral post, turns it into a brief, saves it to Google Drive, and ChatGPT reads that brief from Drive to generate the infographic.
-
-```mermaid
-flowchart TD
-    A["Instagram accounts to monitor<br/>(public Business/Creator)"] -->|"Meta Graph API<br/>Business Discovery"| B["fetch.py<br/>last 3 days, top 2 per account,<br/>ranked by engagement rate"]
-    B --> C["Dated folder YYYY-MM-DD<br/>candidates.json + candidates/ images"]
-    C --> D["Claude (scheduled 9:00 or /daily-brief)<br/>views images, picks the best post,<br/>follows style-guide.md"]
-    D --> E["brief.md + reference.jpg<br/>headline, data to verify,<br/>ready-to-paste image prompt, other ideas"]
-    E --> F[("Google Drive folder<br/>style-guide.md, sample images, logo,<br/>one folder per day")]
-    F --> G["ChatGPT<br/>reads brief.md + style-guide.md,<br/>generates the infographic"]
-    G --> H["Human check<br/>verify numbers, real logo PNG,<br/>compare with samples, then publish"]
 ```
-
-**Steps in plain words**
-1. **Collect (`fetch.py`)**: calls the Meta Graph API for each monitored account, keeps posts from the last 3 days, takes the best 2 per account by engagement rate (likes + comments divided by followers), and saves them with their images in a folder named by date.
-2. **Decide (Claude)**: looks at the candidate images, skips personal or non-data posts, prefers US-stock topics shown as simple lists or charts, picks one, and never reuses a post already chosen that day. It uses the post only as inspiration, not as content to copy.
-3. **Brief (Claude)**: writes `brief.md` (why it was chosen, which numbers must be verified from primary sources, a catchy two-line headline, chart type, and an image-generation prompt following `style-guide.md`) plus `reference.jpg`, and lists a few other trending topics.
-4. **Store (Google Drive)**: the dated folder lives in one Drive folder together with `style-guide.md`, the sample images and the official logo. On a Mac the Drive desktop app syncs it automatically; on Claude cloud `gdrive.py` uploads it through the Drive API.
-5. **Generate (ChatGPT)**: reads `brief.md` and the style guide from Drive and creates the image.
-6. **Review (human)**: verify every number against its source, use the real logo file, compare with the sample posts, then publish.
-
-**Who runs where**
-
-| Part | Runs on | Triggered by |
-|---|---|---|
-| `fetch.py`, brief writing | Claude (Mac scheduled task, or Claude cloud Routine) | Daily 9:00, or `/daily-brief` by hand |
-| Storage | Google Drive | Drive desktop sync, or `gdrive.py` |
-| Image generation | ChatGPT | A person (or a ChatGPT automation) reading the Drive folder |
-
-Old dated folders are deleted automatically after 24 hours so the Drive folder stays small.
+Schedule (daily 9:00)  ->  Claude reads claude/SKILL.md
+  |
+  |- python3 fetch.py   (Meta API: recent posts from monitored accounts -> candidates.json + images)
+  |- Claude picks the best post and writes brief.md + reference.jpg
+  |- Saved to the Google Drive folder (Drive desktop sync, or gdrive.py upload), one folder per day
+  `- ChatGPT reads brief.md + style-guide.md from Drive and generates the infographic
+```
 
 ---
 
