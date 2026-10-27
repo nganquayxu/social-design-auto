@@ -28,7 +28,7 @@ Infographics produced with this workflow (files in `chatgpt/output-examples/`):
   <tr>
     <td><img src="chatgpt/output-examples/output-04-semi-sell-off.webp" width="240" alt="The semi sell-off"></td>
     <td><img src="chatgpt/output-examples/output-05-spacex-ai-drives-half.webp" width="240" alt="AI drives half of SpaceX revenue"></td>
-    <td></td>
+    <td><img src="chatgpt/output-examples/output-06-berkshire-portfolio.webp" width="240" alt="Inside Berkshire portfolio"></td>
   </tr>
 </table>
 
