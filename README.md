@@ -1,4 +1,4 @@
-# [BRAND_NAME] infographic workflow
+# Social Media Design/Infographic Workflow
 
 A daily workflow that finds recent viral posts on Instagram, AI picks the best one, and design the infographic following the brand style.
 
