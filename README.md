@@ -1,4 +1,4 @@
-# Spiking infographic workflow
+# [BRAND_NAME] infographic workflow
 
 A daily workflow that finds recent viral posts on Instagram, AI picks the best one, and design the infographic following the brand style.
 

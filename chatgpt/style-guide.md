@@ -1,4 +1,4 @@
-# Spiking infographic style guide
+# [BRAND_NAME] infographic style guide
 
 Reference images: `_style-reference/` (sample-01..10 = finished posts, palette-and-chart-types.png = palette + chart types).
 
@@ -20,12 +20,12 @@ Reference images: `_style-reference/` (sample-01..10 = finished posts, palette-a
 - Numbers are the hero: big, bold, blue.
 
 ## Layout
-1. Kicker (top-left) + Spiking logo cluster (top-right or bottom-right).
+1. Kicker (top-left) + [BRAND_NAME] logo cluster (top-right or bottom-right).
 2. Two-tone headline.
 3. One-sentence subhead with the key stat.
 4. Hero visual: ONE main chart or stat block (bar list, line chart, waterfall, donut, table, yield curve, flow of cards).
 5. Takeaway strip: rounded pale-blue (#eef6ff / #d9ebff) card with icon (lightbulb/chip/coins) + one bold sentence.
-6. Footer: "Source:" and "Note:" in small text, left; "Calculations by Spiking." at the end. Logo "Spiking" (blue script) + "powered by aws" + "Google Cloud Partner" bottom-right.
+6. Footer: "Source:" and "Note:" in small text, left; "Calculations by [BRAND_NAME]." at the end. Logo "[BRAND_NAME]" (blue script) + "powered by aws" + "Google Cloud Partner" bottom-right.
 
 ## Components
 - Rounded cards (radius ~16-24px), soft shadow or 1px pale-blue border.
@@ -38,9 +38,9 @@ Reference images: `_style-reference/` (sample-01..10 = finished posts, palette-a
 - Finance/markets, factual, concise. Always cite the data source and the as-of date. Educational only, not financial advice.
 
 ## Prompt template for image generation
-"Create a 1080x1350 (4:5) finance infographic in the Spiking style from the attached references and style-guide.md.
+"Create a 1080x1350 (4:5) finance infographic in the [BRAND_NAME] style from the attached references and style-guide.md.
 Topic/data: <paste from brief.md>.
 Headline (2 lines, caps; line 1 navy, line 2 vivid blue): <...>. Subhead: <...>.
 Hero visual: <chart type> using ONLY the numbers in the brief, do not invent or alter numbers.
-Takeaway strip: <one sentence>. Footer: Source: <...>. Calculations by Spiking. Include Spiking logo + powered by AWS + Google Cloud Partner bottom-right.
+Takeaway strip: <one sentence>. Footer: Source: <...>. Calculations by [BRAND_NAME]. Include [BRAND_NAME] logo + powered by AWS + Google Cloud Partner bottom-right.
 Palette and typography exactly per style-guide.md. Light airy background, no clutter."
