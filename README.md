@@ -17,6 +17,23 @@ Schedule (daily 9:00)  →  Claude reads claude/SKILL.md
                           └─ ChatGPT reads the brief from Drive and makes the infographic
 ```
 
+## Example results
+
+Infographics produced with this workflow (files in `chatgpt/output-examples/`):
+
+<table>
+  <tr>
+    <td><img src="chatgpt/output-examples/output-01-coreweave-debt-wall.webp" width="240" alt="CoreWeave debt wall"></td>
+    <td><img src="chatgpt/output-examples/output-02-spacex-how-it-makes-money.webp" width="240" alt="How SpaceX makes money"></td>
+    <td><img src="chatgpt/output-examples/output-03-mag7-paying-up-for-growth.webp" width="240" alt="Magnificent 7 forward P/E"></td>
+  </tr>
+  <tr>
+    <td><img src="chatgpt/output-examples/output-04-semi-sell-off.webp" width="240" alt="The semi sell-off"></td>
+    <td><img src="chatgpt/output-examples/output-05-spacex-ai-drives-half.webp" width="240" alt="AI drives half of SpaceX revenue"></td>
+    <td></td>
+  </tr>
+</table>
+
 ---
 
 ## How to restore / reuse (read this first)
