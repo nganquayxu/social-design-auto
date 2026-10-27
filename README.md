@@ -9,11 +9,12 @@ No secrets are stored in this repo. Tokens live in `.env` / environment variable
 ## How it works
 
 ```
-Every morning at 9:00
-  1. Claude gets new Instagram posts      (fetch.py)
-  2. Claude picks the best one and writes a brief
-  3. The brief is saved to Google Drive
-  4. ChatGPT reads the brief from Drive and makes the infographic
+Schedule (daily 9:00)  →  Claude reads claude/SKILL.md
+                          │
+                          ├─ python3 fetch.py   (get new Instagram posts)
+                          ├─ Claude picks the best post and writes brief.md
+                          ├─ Brief is saved to Google Drive
+                          └─ ChatGPT reads the brief from Drive and makes the infographic
 ```
 
 ---
